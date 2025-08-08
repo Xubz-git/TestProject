@@ -1,0 +1,59 @@
+/* 全局样式：政府绿色/蓝色系 */
+:root {
+  --primary: #007a55; /* 绿色 */
+  --secondary: #005bac; /* 蓝色 */
+  --bg: #f5f7f9;
+  --text: #333;
+}
+[data-theme="dark"] {
+  --bg: #1e1f22;
+  --text: #eee;
+}
+body {
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* 导航条 */
+.navbar {
+  display: flex;
+  gap: 1rem;
+  padding: .5rem 1rem;
+  background: var(--primary);
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem;
+}
+.navbar a:hover { background: rgba(255,255,255,.2); }
+
+/* 页面淡入动画 */
+.fade { opacity: 0; transition: opacity .3s; }
+.fade.show { opacity: 1; }
+
+/* 表格与交互 */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .5rem; border-bottom: 1px solid #ccc; }
+tr:hover { background: rgba(0,0,0,.05); }
+
+/* 按钮 */
+button { padding: .4rem .8rem; margin: .2rem; cursor: pointer; }
+button:hover { filter: brightness(1.1); }
+
+/* 弹窗 */
+.modal { position: fixed; top:0;left:0;right:0;bottom:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,.3); }
+.modal-content { background:var(--bg); padding:1rem; border-radius:4px; transform:scale(.9); transition:transform .2s; min-width:280px; }
+.modal.show .modal-content { transform:scale(1); }
+.modal.hidden { display:none; }
+
+/* 骨架屏 */
+.skeleton { background: linear-gradient(90deg,#eee,#ddd,#eee); background-size:200% 100%; animation: loading 1.2s infinite; }
+@keyframes loading { from{background-position:200% 0;} to{background-position:-200% 0;} }
+
+/* 响应式 */
+@media (max-width:600px) {
+  .navbar { flex-wrap: wrap; }
+}
