@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>某省生态环境厅数据资源目录管理系统</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <nav class="navbar" aria-label="主导航">
+    <a href="#/home">首页</a>
+    <a href="#/catalog">目录管理</a>
+    <a href="#/departments">部门与标签</a>
+    <a href="#/stats">统计分析</a>
+    <a href="#/settings">系统设置</a>
+  </nav>
+
+  <!-- 页面容器 -->
+  <main id="view" tabindex="-1" class="fade"></main>
+
+  <!-- 弹窗容器 -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
+
+  <script src="data.js"></script>
+  <script src="charts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
