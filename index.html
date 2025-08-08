@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生态环境厅数据资源目录管理系统</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="navbar">
+    <h1 class="logo">数据资源目录</h1>
+    <nav id="nav">
+      <button id="nav-toggle" class="hamburger" aria-label="菜单">☰</button>
+      <ul class="nav-list">
+        <li><a href="#home" data-page="home" class="nav-link">首页</a></li>
+        <li><a href="#directory" data-page="directory" class="nav-link">目录管理</a></li>
+        <li><a href="#stats" data-page="stats" class="nav-link">统计分析</a></li>
+      </ul>
+    </nav>
+    <button id="themeToggle" class="theme-btn" aria-label="切换主题">🌙</button>
+  </header>
+
+  <main id="app">
+    <!-- 首页 -->
+    <section id="home" class="page">
+      <div class="home-grid">
+        <div id="metrics" class="metrics"></div>
+        <div id="timeline" class="timeline card"></div>
+        <div class="charts">
+          <canvas id="deptBar" width="400" height="300" class="card"></canvas>
+          <canvas id="updateLine" width="400" height="300" class="card"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 目录管理 -->
+    <section id="directory" class="page hidden">
+      <div class="table-actions">
+        <button id="exportCsv" class="btn">导出 CSV</button>
+      </div>
+      <div class="table-container card">
+        <table id="dirTable">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 统计分析 -->
+    <section id="stats" class="page hidden">
+      <div class="chart-controls">
+        <select id="chartType">
+          <option value="bar">柱状图</option>
+          <option value="line">折线图</option>
+          <option value="pie">饼图</option>
+        </select>
+        <button id="exportPng" class="btn">导出 PNG</button>
+      </div>
+      <canvas id="statsChart" width="600" height="400" class="card"></canvas>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
