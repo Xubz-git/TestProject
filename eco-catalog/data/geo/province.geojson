@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "properties": {"name": "武汉市"}, "geometry": {"type": "Polygon", "coordinates": [[[114,30],[115,30],[115,31],[114,31],[114,30]]]}},
+    {"type": "Feature", "properties": {"name": "黄石市"}, "geometry": {"type": "Polygon", "coordinates": [[[115,29],[116,29],[116,30],[115,30],[115,29]]]}},
+    {"type": "Feature", "properties": {"name": "咸宁市"}, "geometry": {"type": "Polygon", "coordinates": [[[113,29],[114,29],[114,30],[113,30],[113,29]]]}},
+    {"type": "Feature", "properties": {"name": "荆州市"}, "geometry": {"type": "Polygon", "coordinates": [[[112,30],[113,30],[113,31],[112,31],[112,30]]]} }
+  ]
+}

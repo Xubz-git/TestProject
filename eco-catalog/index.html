@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生态环境数据资源目录</title>
+  <link rel="stylesheet" href="./libs/antd.min.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script src="./libs/react.production.min.js"></script>
+  <script src="./libs/react-dom.production.min.js"></script>
+  <script src="./libs/dayjs.min.js"></script>
+  <script src="./libs/antd.min.js"></script>
+  <script src="./libs/icons.min.js"></script>
+  <script src="./libs/echarts.min.js"></script>
+  <script src="./libs/jszip.min.js"></script>
+  <script src="./libs/FileSaver.min.js"></script>
+  <script>
+    (function () {
+      const root = document.getElementById('root');
+      const deps = [
+        ['React', window.React],
+        ['ReactDOM', window.ReactDOM],
+        ['dayjs', window.dayjs],
+        ['Ant Design', window.antd],
+        ['icons', window.icons],
+        ['ECharts', window.echarts],
+        ['JSZip', window.JSZip],
+        ['FileSaver', window.saveAs]
+      ];
+      const missing = deps.filter(d => !d[1]).map(d => d[0]);
+      if (missing.length) {
+        root.innerHTML = '<div style="padding:16px;color:red;">缺少依赖: ' + missing.join(', ') + '。请运行 scripts/vendor.sh</div>';
+        throw new Error('Missing libraries: ' + missing.join(', '));
+      }
+    })();
+  </script>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
