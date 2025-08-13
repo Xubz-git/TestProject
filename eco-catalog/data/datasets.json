@@ -1,0 +1,47 @@
+[
+  {
+    "id": "water001",
+    "name": "地表水质监测月报",
+    "department": "水生态环境处",
+    "category": "水环境",
+    "coverage": "武汉市",
+    "updateFrequency": "每月",
+    "format": "CSV",
+    "lastUpdated": "2025-07-15",
+    "fields": [
+      {"name": "station", "type": "string", "description": "监测站", "level": "公开"},
+      {"name": "ph", "type": "number", "description": "pH"}
+    ],
+    "description": "覆盖主要断面水质监测指标的月度汇总。"
+  },
+  {
+    "id": "air001",
+    "name": "城市空气质量日报",
+    "department": "大气环境处",
+    "category": "大气环境",
+    "coverage": "黄石市,咸宁市",
+    "updateFrequency": "每天",
+    "format": "JSON",
+    "lastUpdated": "2025-07-16",
+    "fields": [
+      {"name": "city", "type": "string", "description": "城市", "level": "内部"},
+      {"name": "aqi", "type": "number", "description": "空气质量指数", "level": "公开"}
+    ],
+    "description": "各城市空气质量日监测数据。"
+  },
+  {
+    "id": "soil001",
+    "name": "土壤重金属监测季报",
+    "department": "土壤生态环境处",
+    "category": "土壤环境",
+    "coverage": "荆州市",
+    "updateFrequency": "每季",
+    "format": "XLSX",
+    "lastUpdated": "2025-06-30",
+    "fields": [
+      {"name": "site", "type": "string", "description": "监测点", "level": "公开"},
+      {"name": "pb", "type": "number", "description": "铅含量", "level": "敏感"}
+    ],
+    "description": "重点区域土壤重金属含量季度数据。"
+  }
+]
